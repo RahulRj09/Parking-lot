@@ -15,4 +15,5 @@ public class Spot {
     public void setOccupiedSpots(int occupiedSpots) {
         this.occupiedSpots += occupiedSpots;
     }
+
 }
