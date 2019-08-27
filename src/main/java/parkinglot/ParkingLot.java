@@ -21,21 +21,18 @@ public class ParkingLot {
 
     private boolean isSpotAvailable(int spotsNeeded) {
         int emptySpots = getTOTAL_SPOTS() - getOccupiedSpots();
-        if (emptySpots >= spotsNeeded) {
-            return true;
-        }
-        return false;
+        return emptySpots >= spotsNeeded;
     }
 
-    public int getTOTAL_SPOTS() {
+    private int getTOTAL_SPOTS() {
         return TOTAL_SPOTS;
     }
 
-    public int getOccupiedSpots() {
+    private int getOccupiedSpots() {
         return occupiedSpots;
     }
 
-    public void setOccupiedSpots(int occupiedSpots) {
+    private void setOccupiedSpots(int occupiedSpots) {
         this.occupiedSpots += occupiedSpots;
     }
 
