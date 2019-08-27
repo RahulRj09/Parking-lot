@@ -1,11 +1,7 @@
 package parkinglot;
 
 public class Vehicle {
-    String vehicleType;
-    int spotsNeeded;
+    private String vehicleType;
+    private int spotsNeeded;
 
-    public Vehicle(String vehicleType, int spotsNeeded) {
-        this.vehicleType = vehicleType;
-        this.spotsNeeded = spotsNeeded;
-    }
 }
