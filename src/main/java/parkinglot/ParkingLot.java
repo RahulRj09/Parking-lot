@@ -22,6 +22,7 @@ public class ParkingLot {
         if (vehicles.contains(vehicle)) {
             vehicles.remove(vehicle);
             occupiedSpots -= vehicle.getSpotsNeeded();
+            return true;
         }else if(vehicles.isEmpty()){
             System.out.println("PARKING LOT IS VACANT");
             return false;
