@@ -11,7 +11,7 @@ public class Client {
         parkingLot.park(bike);
         parkingLot.park(car);
         parkingLot.park(bus);
-        parkingLot.unpark(car);
-        parkingLot.unpark(bus);
+        parkingLot.unPark(car);
+        parkingLot.unPark(bus);
     }
 }

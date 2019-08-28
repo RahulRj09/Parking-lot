@@ -18,10 +18,13 @@ public class ParkingLot {
         return false;
     }
 
-    public boolean unpark(Vehicle vehicle) {
+    public boolean unPark(Vehicle vehicle) {
         if (vehicles.contains(vehicle)) {
             vehicles.remove(vehicle);
             occupiedSpots -= vehicle.getSpotsNeeded();
+        }else if(vehicles.isEmpty()){
+            System.out.println("PARKING LOT IS VACANT");
+            return false;
         }
         return false;
     }
