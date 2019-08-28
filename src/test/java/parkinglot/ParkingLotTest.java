@@ -11,6 +11,7 @@ public class ParkingLotTest {
         ParkingLot parkingLot = new ParkingLot();
         assertTrue(parkingLot.park(car));
     }
+
     @Test
     public void vehicleShouldBeUnPark() {
         Car car = new Car("12344");
@@ -18,12 +19,19 @@ public class ParkingLotTest {
         parkingLot.park(car);
         assertTrue(parkingLot.unPark(car));
     }
+
     @Test
-    public void vehicleShouldNotInParkingLot(){
+    public void vehicleShouldNotInParkingLot() {
         Car car = new Car("12344");
         ParkingLot parkingLot = new ParkingLot();
         parkingLot.park(car);
         Car car1 = new Car("12344");
         assertFalse(parkingLot.unPark(car1));
+    }
+    @Test
+    public void parkingLotShouldBeVacant() {
+        Car car = new Car("12344");
+        ParkingLot parkingLot = new ParkingLot();
+        assertFalse(parkingLot.unPark(car));
     }
 }
