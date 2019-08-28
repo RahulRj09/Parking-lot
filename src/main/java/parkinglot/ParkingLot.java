@@ -18,17 +18,20 @@ public class ParkingLot {
         return false;
     }
 
-    public int getOccupiedSpots() {
+   private int getOccupiedSpots() {
         return occupiedSpots;
     }
 
-    public int getSPOTS() {
+   private int getSPOTS() {
         return SPOTS;
     }
 
     private boolean isAvailable(int spotsNeeded) {
-        int emptySpots = getSPOTS() - getOccupiedSpots();
-        return emptySpots >= spotsNeeded;
+        return getEmptySpots() >= spotsNeeded;
+    }
+
+    private int getEmptySpots() {
+        return getSPOTS() - getOccupiedSpots();
     }
 
 }
