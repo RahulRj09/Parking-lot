@@ -18,11 +18,11 @@ public class ParkingLot {
         return false;
     }
 
-   private int getOccupiedSpots() {
+    private int getOccupiedSpots() {
         return occupiedSpots;
     }
 
-   private int getSPOTS() {
+    private int getSPOTS() {
         return SPOTS;
     }
 
