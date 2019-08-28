@@ -18,4 +18,12 @@ public class ParkingLotTest {
         parkingLot.park(car);
         assertTrue(parkingLot.unPark(car));
     }
+    @Test
+    public void vehicleShouldNotInParkingLot(){
+        Car car = new Car("12344");
+        ParkingLot parkingLot = new ParkingLot();
+        parkingLot.park(car);
+        Car car1 = new Car("12344");
+        assertFalse(parkingLot.unPark(car1));
+    }
 }
