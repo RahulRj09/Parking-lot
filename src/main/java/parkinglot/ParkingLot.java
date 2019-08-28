@@ -18,16 +18,24 @@ public class ParkingLot {
         return false;
     }
 
+    public boolean unpark(Vehicle vehicle) {
+        if (vehicles.contains(vehicle)) {
+            vehicles.remove(vehicle);
+            occupiedSpots -= vehicle.getSpotsNeeded();
+        }
+        return false;
+    }
+
+    private boolean isAvailable(int spotsNeeded) {
+        return getEmptySpots() >= spotsNeeded;
+    }
+
     private int getOccupiedSpots() {
         return occupiedSpots;
     }
 
     private int getSPOTS() {
         return SPOTS;
-    }
-
-    private boolean isAvailable(int spotsNeeded) {
-        return getEmptySpots() >= spotsNeeded;
     }
 
     private int getEmptySpots() {
