@@ -1,13 +1,11 @@
 package parkinglot;
 
-public class Vehicle {
-    private int spotsNeeded;
-
-    public Vehicle(int spotsNeeded) {
-        this.spotsNeeded = spotsNeeded;
-    }
+public abstract class Vehicle {
+    int spotsNeeded;
+    String licenceNumber;
 
     public int getSpotsNeeded() {
         return spotsNeeded;
     }
+
 }

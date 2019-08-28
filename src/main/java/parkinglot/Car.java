@@ -1,7 +1,8 @@
 package parkinglot;
 
 public class Car extends Vehicle {
-    public Car() {
-        super(2);
+    public Car(String licenceNumber) {
+        spotsNeeded = 2;
+        this.licenceNumber = licenceNumber;
     }
 }
