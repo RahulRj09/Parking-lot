@@ -2,9 +2,8 @@ package parkinglot;
 
 public abstract class Vehicle {
     int spotsNeeded;
-    String licenceNumber;
 
-    public int getSpotsNeeded() {
+    int getSpotsNeeded() {
         return spotsNeeded;
     }
 

@@ -6,7 +6,7 @@ import java.util.List;
 public class ParkingLot {
     private int occupiedSpots = 0;
     private final int SPOTS = 20;
-    List<Vehicle> vehicles = new ArrayList<>();
+    private List<Vehicle> vehicles = new ArrayList<>();
 
     public boolean park(Vehicle vehicle) {
         if (isAvailable(vehicle.getSpotsNeeded())) {
@@ -20,10 +20,10 @@ public class ParkingLot {
 
     public boolean unPark(Vehicle vehicle) {
         if (vehicles.contains(vehicle)) {
-            vehicles.remove(vehicle);
             occupiedSpots -= vehicle.getSpotsNeeded();
+            vehicles.remove(vehicle);
             return true;
-        }else if(vehicles.isEmpty()){
+        } else if (vehicles.isEmpty()) {
             System.out.println("PARKING LOT IS VACANT");
             return false;
         }
