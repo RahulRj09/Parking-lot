@@ -7,14 +7,14 @@ import org.junit.Test;
 public class ParkingLotTest {
     @Test
     public void vehicleShouldBePark() {
-        Car car = new Car("12344");
+        Car car = new Car();
         ParkingLot parkingLot = new ParkingLot();
         assertTrue(parkingLot.park(car));
     }
 
     @Test
     public void vehicleShouldBeUnPark() {
-        Car car = new Car("12344");
+        Car car = new Car();
         ParkingLot parkingLot = new ParkingLot();
         parkingLot.park(car);
         assertTrue(parkingLot.unPark(car));
@@ -22,8 +22,8 @@ public class ParkingLotTest {
 
     @Test
     public void vehicleShouldNotInParkingLot() {
-        Car car = new Car("12344");
-        Car car1 = new Car("12344");
+        Car car = new Car();
+        Car car1 = new Car();
         ParkingLot parkingLot = new ParkingLot();
         parkingLot.park(car);
         assertFalse(parkingLot.unPark(car1));
@@ -31,19 +31,19 @@ public class ParkingLotTest {
 
     @Test
     public void parkingLotShouldBeVacant() {
-        Car car = new Car("12344");
+        Car car = new Car();
         ParkingLot parkingLot = new ParkingLot();
         assertFalse(parkingLot.unPark(car));
     }
 
     @Test
     public void parkingLotShouldBeFull(){
-        Bus bus = new Bus("12344");
-        Bus bus1 = new Bus("12344");
-        Bus bus2 = new Bus("12344");
-        Bus bus3 = new Bus("12344");
-        Bus bus4 = new Bus("12344");
-        Car car = new Car("123445");
+        Bus bus = new Bus();
+        Bus bus1 = new Bus();
+        Bus bus2 = new Bus();
+        Bus bus3 = new Bus();
+        Bus bus4 = new Bus();
+        Car car = new Car();
         ParkingLot parkingLot = new ParkingLot();
         parkingLot.park(bus);
         parkingLot.park(bus1);
